@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel - Contato</title>
+
+    <link rel="icon" href="Imagens/icone.png">
+
+    <style>
+
+        body {
+            background-image: url(Imagens/fundo.png);
+        }
+
+        .background {
+            background-image: url(Imagens/Fundo.jpg);
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            filter: blur(4px);
+            opacity: 0.3;
+        }
+
+        .conteudo {
+            position: relative;
+            z-index: 1;
+        }
+
+        .formatar {
+		    color: black;
+		    font-size: 25px;
+		    text-align: justify;
+		    }
+        
+        .imagem {
+		    border-radius: 40px;
+		    }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+        
+        }
+
+        .centro-formulario {
+            width: 70%;
+
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="conteudo">
+
+    <div class="formatar">
+
+		| <a style="color: black; text-decoration: none;" href="index.html">Início</a> | 
+
+		<a style="color: black; text-decoration: none;" href="Filmes.html">Filmes</a> |
+
+		<a style="color: black; text-decoration: none;" href="Pagina vazia.html">Séries</a> |
+
+		<a style="color: black; text-decoration: none;" href="Pagina vazia.html">Heróis</a> |
+
+		<a style="color: black; text-decoration: none;" href="Pagina vazia.html">História</a> |
+	
+		<a style="color: black; text-decoration: none;" href="Pagina vazia.html">Membros</a> |
+
+        <a style="color: black; text-decoration: none;" href="Local.html">Local</a> |
+
+        <span style="padding-left: 35vw"><a style="color: black; text-decoration: none;" href="Contato.html"><b>Entre em contato</b></a></span>
+
+	</div>
+
+    <hr style="border: 3px solid red;">
+
+    <h1 align="center" >Preencha as informações</h1>
+
+
+    <center>
+        <div class="centro-formulario">
+
+        <form>
+
+        <center>
+        <label for="Nome">Nome</label><br>
+        <input accesskey="N" type="text" id="Nome" name="Nome" minlength="2" maxlength="50" required placeholder="Alt+N">
+        </center>
+
+        <br><br>
+      
+        <center>
+        <label for="email" >Email</label><br>
+        <input accesskey="G" type="email" id="email" name="email" required maxlength="100" placeholder="Alt+G">
+        </center>
+
+        <br><br>
+
+        <center>
+        <label for="Motivo" >Motivo do contato</label><br>
+        <input accesskey="M" placeholder="Alt+M" type="text" name="Motivo" id="Motivo" list="motivo-contato" required>
+        </center>
+
+        <datalist id="motivo-contato">
+            <option value="Problema">Problema no site</option>
+            <option value="Duvida">Duvida</option>
+            <option value="Ajuda">Ajuda</option>
+            <option value="Melhoria">Dica de melhoria</option>
+            <option value="Ideias">Ideias</option>
+        </datalist>
+
+        <br><br>
+      
+        <center>
+        <label for="Nivel" >Nivel de complexidade</label><br>
+         0 <input type="range" id="Nivel" name="Nivel" required min="1" max="10"> 10
+        </center>
+         
+         <br><br>
+
+        <center>
+        <label for="Complemento">Complemento</label><br>
+        <textarea accesskey="C" placeholder="Alt+C" id="Complemento" name="Complemento" maxlength="500" rows="6" cols="30"></textarea>
+        </center>
+        
+        <br><br>
+      
+        <center>
+        <input style="height: 50px; width: 100px;" type="submit" value="ENVIAR" >
+        </center>
+
+      </form>
+
+      </div>
+        </center>
+
+    </div>
+    
+</body>
+</html>
