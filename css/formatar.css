@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'BanKGhotic';
+  src: url('../fontes/bank.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.topo {
+  display: flex;
+  background-image: url(../imagens/Topo.png);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 81px;
+  z-index: 3;
+}
+
+.topo2 {
+  background-image: url(../imagens/Topo2.png);
+  background-size: cover;
+  position: absolute;
+  top: 81px;
+  right: 0;
+  width: 73%;
+  height: 10px;
+  z-index: 2;
+}
+
+.texto-topo {
+    color: white;
+    font-family: 'BanKGhotic', sans-serif;
+    font-size: 26px;
+}
+
+.logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 140px;
+    width: 100%;
+}
+
+.automação {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 307px;
+    left: 4vw;
+    width: 20vw;
+}
+
+.usinagem {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 307px;
+    left: 28vw;
+    width: 20vw;
+}
+
+.assistencia {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 307px;
+    left: 52vw;
+    width: 20vw;
+}
+
+.produtos {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 307px;
+    left: 76vw;
+    width: 20vw;
+}
