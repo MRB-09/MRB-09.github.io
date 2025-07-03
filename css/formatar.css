@@ -142,6 +142,34 @@ body, html {
     font-family: 'BanKGhotic', sans-serif;
 }
 
+.Felipe {
+    position: absolute;
+    background-image: url(../imagens/Felipe\ Franco.png);
+    background-size: cover;
+    width: 25vw;
+    height: 8vh;
+    left: 5vw;
+    top: 100vh;
+    z-index: 5;
+    color: white;
+    font-size: 50px;
+    font-family: 'BanKGhotic', sans-serif;
+}
+
+.Junior {
+    position: absolute;
+    background-image: url(../imagens/Junior\ Franco.png);
+    background-size: cover;
+    width: 25vw;
+    height: 8vh;
+    left: 5vw;
+    top: 115vh;
+    z-index: 5;
+    color: white;
+    font-size: 50px;
+    font-family: 'BanKGhotic', sans-serif;
+}
+
 .base {
     position: absolute;
     background-image: url(../imagens/Base.png);
@@ -149,4 +177,51 @@ body, html {
     width: 100%;
     height: 15vh;
     top: 141vh;
+}
+
+.endereço {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 152vh;
+    font-size: 24px;
+    font-family: 'BanKGhotic', sans-serif;
+    width: 100%;
+}
+
+.midia {
+    position: absolute;
+    color: white;
+    top: 145vh;
+    font-size: 24px;
+    font-family: 'BanKGhotic', sans-serif;
+    width: 100%;
+}
+
+.FelipeNumero {
+    position: absolute;
+    top: 145vh;
+    font-size: 24px;
+    font-family: 'BanKGhotic', sans-serif;
+    left: 2vw;
+    color: white;
+    width: 22vw;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.JuniorNumero {
+    position: absolute;
+    top: 145vh;
+    font-size: 24px;
+    font-family: 'BanKGhotic', sans-serif;
+    left: 76vw;
+    color: white;
+    width: 22vw;
 }
