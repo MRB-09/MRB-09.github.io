@@ -17,12 +17,32 @@ header {
     background-size: cover;
     margin: 0;
     width: 100%;
-    height: 10vh;
+    height: 0vh;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transition: height 0.5s ease-out;
+}
+
+.Header {
+    height: 10vh;
+}
+
+#TextoHeader {
     font-size: clamp(1rem, 2.3vw, 3.5rem);
     color: white;
+    opacity: 0;
+    scale: 0.9;
+    transition: opacity 1s, scale 1s; 
 }
+
+#TextoHeader.Animar {
+    color: white;
+    opacity: 1;
+    scale: 1.1;
+}
+
+
 
 .topo {
     position: absolute;
@@ -31,18 +51,26 @@ header {
     background-size: cover;
     right: 0;
     width: 75vw;
+    height: 0vh;
+    overflow: hidden;
+    transition: height 0.5s ease-in;
+}
+
+.topo.Animar {
     height: 1.5vh;
 }
 
 .Logo1 {
     position: relative;
+    display: flex;
+    justify-content: center;
     top: 1.5vh;
     width: 100%;
     height: 21.5vh;
 }
 
 .Logo2 {
-    position: relative;
+    position: absolute;
     display: flex;
     top: 5vh;
     left: 35vw;
@@ -55,21 +83,22 @@ nav {
     position: relative;
     display: flex;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     justify-content: center;
     gap: 5vw;
+    background-color: white;
 }
 
 .botao {
     width: 20vw;
-    height: 40vh;
+    height: 50vh;
 }
 
 main {
     position: relative;
     display: flex;
     width: 100%;
-    height: 71vh;
+    height: 69vh;
 }
 
 .Meio1 {
@@ -87,15 +116,6 @@ main {
     background-image: url(../Imagens/ImagemMeio.png);
     background-size: cover;
     z-index: 0;
-}
-
-.Meio3 {
-    position: absolute;
-    top: 69vh;
-    width: 100%;
-    height: 2vh;
-    background-image: url(../Imagens/ImagemCima.png);
-    background-size: cover;
 }
 
 .FundoMeio {
@@ -131,22 +151,40 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8vh;
     top: 12vh;
     width: 74%;
-    height: 49vh;
+    height: 12vh;
+}
+
+.Contato2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30vh;
+    width: 74%;
+    height: 12vh;
 }
 
 .BotaoContato {
     width: 30vw;
-    height: 10vh;
+    height: 12vh;
 }
 
 footer {
     position: relative;
+    top: 10vh;
     width: 100%;
-    height: 15vh;
+    height: 22vh;
     background-image: url(../Imagens/Base.png);
+    background-size: cover;
+}
+
+.TopoRodape {
+    position: absolute;
+    width: 100%;
+    height: 2vh;
+    background-image: url(../Imagens/ImagemCima.png);
     background-size: cover;
 }
 
@@ -155,7 +193,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 3vh;
-    top: 3vh;
+    top: 5vh;
     width: 22%;
     height: 10vh;
     align-items: center;
@@ -168,7 +206,7 @@ footer {
 
 .NumeroRodape {
     width: 90%;
-    height: 4vh;
+    height: 6vh;
 }
 
 .Rua {
@@ -176,11 +214,15 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 3vh;
-    top: 3vh;
+    top: 5vh;
     left: 22%;
     width: 56%;
     height: 10vh;
     align-items: center;
+}
+
+.ContainerMidia {
+    width: 30vh;
 }
 
 .Junior {
@@ -188,9 +230,27 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 3vh;
-    top: 3vh;
+    top: 5vh;
     left: 78%;
     width: 22%;
     height: 10vh;
     align-items: center;
+}
+
+.FundoMeio,
+.ContainerMeio {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.FundoMeio.ativo {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ContainerMeio.ativo {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.5s; /* aparece depois da FundoMeio */
 }
