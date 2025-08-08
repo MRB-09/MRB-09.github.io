@@ -82,16 +82,24 @@ header {
 nav {
     position: relative;
     display: flex;
-    width: 100%;
-    height: 60vh;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 5vw;
     background-color: white;
+    padding: 2vh 0;
+    height: auto;
 }
 
 .botao {
     width: 20vw;
-    height: 50vh;
+    aspect-ratio: 2 / 3; /* Mantém proporção fixa mesmo sem height */
+    overflow: hidden;
+}
+
+.botao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que não vai achatar a imagem */
 }
 
 main {
@@ -222,7 +230,17 @@ footer {
 }
 
 .ContainerMidia {
-    width: 30vh;
+    display: flex;
+    width: 35vh;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.BotaoMidia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7vh;
 }
 
 .Junior {
@@ -253,4 +271,96 @@ footer {
     opacity: 1;
     transform: translateX(0);
     transition-delay: 0.5s; /* aparece depois da FundoMeio */
+}
+
+@media screen and (max-width: 1010px) {
+    #TextoHeader {
+        font-size: clamp(0.4rem, 0.8rem, 1.5rem);
+    }
+
+    .Logo2 {
+        scale: 0.8;
+    }
+
+    nav {
+    flex-direction: row; /* Importante: mantém eles lado a lado com wrap */
+    }
+
+    .botao {
+    width: 40vw;
+    aspect-ratio: 4/5;
+    }
+    
+    main {
+        height: 39vh;
+    }
+
+    .Meio2 {
+    height: 37vh;
+    }
+
+    .FundoMeio {
+    height: 37vh;
+}
+
+.ContainerMeio {
+    height: 39vh;
+}
+
+.TextoMeio {
+    font-size: 1.4rem;
+    padding-left: 2vw;
+}
+
+.Contato {
+    display: none;
+}
+
+.Contato2 {
+    display: none;
+}
+
+#Contato1 {
+    display: flex;
+    position: absolute;
+    top: 8vh;
+    left: 4vw;
+    width: 37vw;
+    height: 4vh;
+    background-image: url(../Imagens/Felipe\ Franco.png);
+    background-size: cover;
+}
+
+#Contato2 {
+    display: flex;
+    position: absolute;
+    top: 15vh;
+    left: 4vw;
+    width: 37vw;
+    height: 4vh;
+    background-image: url(../Imagens/Junior\ Franco.png);
+    background-size: cover;
+}
+
+.Felipe {
+    display: none;
+}
+
+.Junior {
+    display: none;
+}
+
+.ContainerMidia {
+    scale: 0.7;
+}
+
+.Rua {
+    left: 0;
+    width: 100%;
+}
+
+.TextoRodape {
+    font-size: 0.9rem;
+}
+
 }

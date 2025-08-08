@@ -53,3 +53,38 @@ ContatoZap2.addEventListener('mouseover', () => {
 ContatoZap2.addEventListener('mouseout', () => {
     ContatoZap2.style.transform = 'scale(1)';
 })
+
+const BotoesMidia = document.querySelectorAll('.BotaoMidia');
+
+BotoesMidia.forEach(BotaoMidia => {
+    BotaoMidia.addEventListener('mouseover', () => {
+    BotaoMidia.style.transform = 'scale(1.2)';
+    BotaoMidia.style.transition = 'transform 0.3s';
+});
+
+BotaoMidia.addEventListener('mouseout', () => {
+    BotaoMidia.style.transform = 'scale(1)';
+})    
+})
+
+const ContatoZap3 = document.querySelector('#Contato1');
+
+ContatoZap3.addEventListener('mouseover', () => {
+    ContatoZap3.style.transform = 'scale(1.2)';
+    ContatoZap3.style.transition = 'transform 0.3s';
+});
+
+ContatoZap3.addEventListener('mouseout', () => {
+    ContatoZap3.style.transform = 'scale(1)';
+})
+
+const ContatoZap4 = document.querySelector('#Contato2');
+
+ContatoZap4.addEventListener('mouseover', () => {
+    ContatoZap4.style.transform = 'scale(1.2)';
+    ContatoZap4.style.transition = 'transform 0.3s';
+});
+
+ContatoZap4.addEventListener('mouseout', () => {
+    ContatoZap4.style.transform = 'scale(1)';
+})
