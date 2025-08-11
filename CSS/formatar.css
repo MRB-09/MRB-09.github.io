@@ -29,7 +29,7 @@ header {
 }
 
 #TextoHeader {
-    font-size: clamp(1rem, 2.3vw, 3.5rem);
+    font-size: 2rem;
     color: white;
     opacity: 0;
     scale: 0.9;
@@ -84,14 +84,14 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5vw;
+    gap: 7vw;
     background-color: white;
     padding: 2vh 0;
-    height: auto;
+    height: 50vh;
 }
 
 .botao {
-    width: 20vw;
+    width: 15vw;
     aspect-ratio: 2 / 3; /* Mantém proporção fixa mesmo sem height */
     overflow: hidden;
 }
@@ -136,10 +136,12 @@ main {
 .ContainerMeio {
     position: absolute;
     display: flex;
+    justify-content: center;
     top: 10vh;
-    width: 58%;
+    width: 52%;
     height: 59vh;
     z-index: 4;
+    
 }
 
 .TextoMeio {
@@ -150,7 +152,7 @@ main {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: clamp(2rem, 4vw, 5rem);
+    font-size: 3.5rem;
     z-index: 4;
 }
 
@@ -160,8 +162,8 @@ main {
     flex-direction: column;
     align-items: center;
     top: 12vh;
-    width: 74%;
-    height: 12vh;
+    width: 50%;
+    height: auto;
 }
 
 .Contato2 {
@@ -170,13 +172,13 @@ main {
     flex-direction: column;
     align-items: center;
     top: 30vh;
-    width: 74%;
-    height: 12vh;
+    width: 50%;
+    height: auto;
 }
 
 .BotaoContato {
-    width: 30vw;
-    height: 12vh;
+    width: 20vw;
+    height: auto;
 }
 
 footer {
@@ -209,12 +211,13 @@ footer {
 
 .TextoRodape {
     color: white;
-    font-size: clamp(1rem, 1.6rem, 3rem);
+    font-size: 1.8rem;
 }
 
 .NumeroRodape {
-    width: 90%;
-    height: 6vh;
+    font-size: 2.2rem;
+    color: white;
+    
 }
 
 .Rua {
@@ -240,7 +243,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 7vh;
+    width: 5vh;
+    height: auto;
 }
 
 .Junior {
@@ -274,6 +278,70 @@ footer {
 }
 
 @media screen and (max-width: 1010px) {
+
+    nav {
+        flex-direction: row;
+        height: 95vh;
+    }
+
+    .botao {
+    width: 29vw;
+    aspect-ratio: 4/5;
+    }
+
+    main {
+        height: 43vh;
+    }
+
+    .Meio2 {
+    height: 41vh;
+    }
+
+    .FundoMeio {
+    height: 41vh;
+}
+
+.ContainerMeio {
+    height: 43vh;
+}
+
+.TextoMeio {
+    font-size: 2rem;
+    padding-left: 2vw;
+}
+
+.Contato {
+    top: 8vh;
+}
+
+.Contato2 {
+    top: 20vh;
+}
+
+.Felipe {
+    display: none;
+}
+
+.Junior {
+    display: none;
+}
+
+.ContainerMidia {
+    scale: 0.8;
+}
+
+.Rua {
+    left: 0;
+    width: 100%;
+}
+
+.TextoRodape {
+    font-size: 1.8rem;
+}
+
+}
+
+@media screen and (max-width: 532px) {
     #TextoHeader {
         font-size: clamp(0.4rem, 0.8rem, 1.5rem);
     }
@@ -284,6 +352,7 @@ footer {
 
     nav {
     flex-direction: row; /* Importante: mantém eles lado a lado com wrap */
+    height: 65vh;
     }
 
     .botao {
@@ -308,7 +377,7 @@ footer {
 }
 
 .TextoMeio {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     padding-left: 2vw;
 }
 
@@ -325,8 +394,8 @@ footer {
     position: absolute;
     top: 8vh;
     left: 4vw;
-    width: 37vw;
-    height: 4vh;
+    width: 28vw;
+    height: 3.5vh;
     background-image: url(../Imagens/Felipe\ Franco.png);
     background-size: cover;
 }
@@ -336,8 +405,8 @@ footer {
     position: absolute;
     top: 15vh;
     left: 4vw;
-    width: 37vw;
-    height: 4vh;
+    width: 28vw;
+    height: 3.5vh;
     background-image: url(../Imagens/Junior\ Franco.png);
     background-size: cover;
 }
