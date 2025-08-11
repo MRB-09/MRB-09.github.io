@@ -279,6 +279,15 @@ footer {
     transition-delay: 0.5s; /* aparece depois da FundoMeio */
 }
 
+a {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
 @media screen and (max-width: 1010px) {
 
     nav {

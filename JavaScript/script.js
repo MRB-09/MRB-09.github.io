@@ -1,17 +1,5 @@
-const botoes = document.querySelectorAll('.botao');
 
-botoes.forEach(botao => {
-    botao.addEventListener('mouseover', () => {
-        botao.style.transform = 'scale(1.2)';
-        botao.style.transition = 'transform 0.3s';
-    });
-
-    botao.addEventListener('mouseout', () => {
-        botao.style.transform = 'scale(1)';
-    });
-});
-
-const meio2 = document.querySelector('.Meio2');
+/* const meio2 = document.querySelector('.Meio2');
 const fundoMeio = document.querySelector('.FundoMeio');
 const containerMeio = document.querySelector('.ContainerMeio');
 
@@ -22,7 +10,30 @@ meio2.addEventListener('mouseenter', () => {
     setTimeout(() => {
         containerMeio.classList.add('ativo');
     }, 500); // 0.5 segundo depois
-});
+}); */
+
+const meio2 = document.querySelector('.Meio2');
+const fundoMeio = document.querySelector('.FundoMeio');
+const containerMeio = document.querySelector('.ContainerMeio');
+
+// Função que verifica a posição da rolagem e ativa a animação
+function verificarScroll() {
+    const meio2Pos = meio2.getBoundingClientRect().top; // Posição do elemento Meio2
+    const alturaJanela = window.innerHeight; // Altura da janela de visualização
+
+    // Verifica se o elemento Meio2 está visível na tela
+    if (meio2Pos < alturaJanela * 0.8) { // Ativa quando 80% do elemento Meio2 estiver visível
+        fundoMeio.classList.add('ativo');
+
+        // Aguarda 0.5 segundo e ativa o containerMeio
+        setTimeout(() => {
+            containerMeio.classList.add('ativo');
+        }, 500); // Delay de 0.5s
+    }
+}
+
+// Adiciona um listener de rolagem na janela
+window.addEventListener('scroll', verificarScroll);
 
 
 window.addEventListener("load", function() {
@@ -52,19 +63,6 @@ ContatoZap2.addEventListener('mouseover', () => {
 
 ContatoZap2.addEventListener('mouseout', () => {
     ContatoZap2.style.transform = 'scale(1)';
-})
-
-const BotoesMidia = document.querySelectorAll('.BotaoMidia');
-
-BotoesMidia.forEach(BotaoMidia => {
-    BotaoMidia.addEventListener('mouseover', () => {
-    BotaoMidia.style.transform = 'scale(1.2)';
-    BotaoMidia.style.transition = 'transform 0.3s';
-});
-
-BotaoMidia.addEventListener('mouseout', () => {
-    BotaoMidia.style.transform = 'scale(1)';
-})    
 })
 
 const ContatoZap3 = document.querySelector('#Contato1');
